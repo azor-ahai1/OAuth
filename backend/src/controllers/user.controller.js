@@ -289,7 +289,8 @@ const handleOAuthLogin = asyncHandler(async (req, res) => {
     };
 
     // Redirect to frontend with tokens
-    const redirectUrl = `${process.env.FRONTEND_URL}/oauth-callback?accessToken=${accessToken}&refreshToken=${refreshToken}`;
+    // const redirectUrl = `${process.env.FRONTEND_URL}/oauth-callback?accessToken=${accessToken}&refreshToken=${refreshToken}`;
+    const redirectUrl = `https://oauth-2rei.onrender.com/oauth-callback?accessToken=${accessToken}&refreshToken=${refreshToken}`;
     
     return res.redirect(redirectUrl);
 });
